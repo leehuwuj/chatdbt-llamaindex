@@ -1,0 +1,1 @@
+DBT is a data framework help user manage data table in dbt model.

@@ -1,23 +1,21 @@
-[tool]
 [tool.poetry]
 name = "app"
 version = "0.1.0"
 description = ""
-authors = [ "Marcus Schiesser <mail@marcusschiesser.de>" ]
+authors = [ "Huu Le <leehuwuj@gmail.com>" ]
 readme = "README.md"
+
+[tool.poetry.scripts]
+plaida-chat = "app.cli:CLIApp.start"
 
 [tool.poetry.dependencies]
 python = "^3.11,<3.12"
 fastapi = "^0.109.1"
+uvicorn = { version = "^0.23.2", extras = [ "standard" ] }
 python-dotenv = "^1.0.0"
-llama-index = "^0.10.7"
-
-[tool.poetry.dependencies.uvicorn]
-extras = [ "standard" ]
-version = "^0.23.2"
-
-[tool.poetry.dependencies.docx2txt]
-version = "^0.8"
+llama-index = "^0.10.12"
+dbt-core = "^1.7.8"
+dbt-artifacts-parser = "^0.5.1"
 
 [build-system]
 requires = [ "poetry-core" ]
